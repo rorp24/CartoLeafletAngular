@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+    background-color: cornflowerblue;
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+    height: 42px;
+    border: none;
+    background-color: dodgerblue;
+    color: white;
+    position: relative;
+}
