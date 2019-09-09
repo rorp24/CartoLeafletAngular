@@ -1,12 +1,15 @@
 #HUDRight {
-    width: 320px;
+    width: 30%;
+    min-width: 192px;
     height: 100%;
     right: 0;
     position: absolute;
+    background-color: dimgrey;
+    overflow: scroll;
 }
 
 #map {
-    width: 100%;
+    width: 70%;
     height: 100%;
     position: absolute;
 }

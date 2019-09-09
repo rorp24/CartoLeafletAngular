@@ -21,4 +21,11 @@ export class FirebaseService {
     firebase.initializeApp(firebaseConf)
     console.log("firebase lancé")
   }
+
+  getData(id)
+  {
+    
+    return firebase.database().ref("/"+id).once('value')
+    
+  }
 }
