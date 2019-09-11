@@ -10,7 +10,7 @@ export class FirebaseService {
 
   constructor() { 
     const firebaseConf ={
-      apiKey: `${FIREBASE_KEY}`, //FIREBASE_KEY is stored in netlify env var
+      apiKey: process.env.FIREBASE_KEY, //FIREBASE_KEY is stored in netlify env var
       authDomain: "projetleaflet.firebaseapp.com",
       databaseURL: "https://projetleaflet.firebaseio.com",
       projectId: "projetleaflet",
@@ -20,7 +20,7 @@ export class FirebaseService {
   }
     firebase.initializeApp(firebaseConf)
     console.log("firebase lancé")
-    console.log( "clée:" +`${FIREBASE_KEY}`) //vérification que l'on récupère bien la clée d'API. A supprimer si sa marche
+    console.log( "clée:" +process.env.FIREBASE_KEY) //vérification que l'on récupère bien la clée d'API. A supprimer si sa marche
   }
 
   getData(id)
