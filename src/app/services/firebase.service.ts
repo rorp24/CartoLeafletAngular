@@ -10,7 +10,7 @@ export class FirebaseService {
 
   constructor() { 
     const firebaseConf ={
-      apiKey: '${FIREBASE_KEY}', //FIREBASE_KEY is stored in netlify env var
+      apiKey: `${FIREBASE_KEY}`, //FIREBASE_KEY is stored in netlify env var
       authDomain: "projetleaflet.firebaseapp.com",
       databaseURL: "https://projetleaflet.firebaseio.com",
       projectId: "projetleaflet",
