@@ -21,6 +21,7 @@ export class FirebaseService {
   }
     firebase.initializeApp(firebaseConf)
     console.log("firebase lancé")
+    console.log("test:"+process.env.netlify)
     console.log( "clée:" +process.env.FIREBASE_KEY) //vérification que l'on récupère bien la clée d'API. A supprimer si sa marche
   }
 
