@@ -3,7 +3,7 @@ import * as firebase from 'firebase/app'
 import 'firebase/auth'
 import 'firebase/database'
 
-const FIREBASE_KEY = process.env.FIREBASE_KEY //FIREBASE_KEY is stored in netlify env var
+const FIREBASE_KEY = process.env.FIREBASE_KEY //FIREBASE_KEY is stored in .env
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +12,7 @@ export class FirebaseService {
 
   constructor() { 
     const firebaseConf ={
-      apiKey: FIREBASE_KEY, //FIREBASE_KEY is stored in netlify env var
+      apiKey: FIREBASE_KEY, 
       authDomain: "projetleaflet.firebaseapp.com",
       databaseURL: "https://projetleaflet.firebaseio.com",
       projectId: "projetleaflet",
