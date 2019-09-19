@@ -2,8 +2,9 @@ import { Injectable } from '@angular/core';
 import * as firebase from 'firebase/app'
 import 'firebase/auth'
 import 'firebase/database'
+import { environment } from '../../environments/environment';
 
-const FIREBASE_KEY = process.env.FIREBASE_KEY //FIREBASE_KEY is stored in .env
+const FIREBASE_KEY = environment.FIREBASE_KEY
 
 @Injectable({
   providedIn: 'root'
@@ -22,8 +23,7 @@ export class FirebaseService {
   }
     firebase.initializeApp(firebaseConf)
     console.log("firebase lancé")
-    console.log("test:",process.env)
-    console.log( "clée:" +FIREBASE_KEY) //vérification que l'on récupère bien la clée d'API. A supprimer si sa marche
+    console.log(FIREBASE_KEY)
   }
 
   getData(id)
